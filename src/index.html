@@ -1,0 +1,31 @@
+---
+layout: default
+title: Home
+---
+
+<h2 id="what" class="ui dividing dividing header">What is maker.json?</h2>
+<p>There are a growing number of DIY shops, offices, coworking spaces, labs, et cetera around the world, filling with people working on amazing projects from Arduinos to Zeroes.</p>
+<p>So many, in fact, it's increasingly hard to keep up. When we started looking around for lists, we found them: several people keeping their own Google Sheets and JSON files for personal or community references, keeping various types of useful information in various formats and collecting a variety of information.</p>
+<p>Enter maker.json: a small file you put at the root of website or at a public repository, storing standardized information about your space, its status, who is involved, what kind of tools are available, and where people can learn more. Think of it as a structured "README" file.</p>
+<p>What does it look like? <a href="#example">Check out an example of the maker.json specification.</a></p>
+
+<h2 id="contribute" class="ui dividing header">How can I contribute?</h2>
+<p><a href="https://github.com/rrbaker/maker.json/tree/master">Here is maker.json schema.</a> <a href="/specification.html">The schema specification</a> gives more detail about the information that goes into a maker.json file.</p> To build your own:
+<ol>
+  <li><a href="/builder.html">Build it</a> with the maker.json web form</li>
+  <li><a href="/validator.html">Validate</a> an existing maker.json file by pasting its contents here</li>
+</ol>
+<p>Additionally, <a href="https://github.com/rrbaker/maker.json/tree/gh-pages">this website's source is here</a>. Both the site, schema, and JSON available under the <a href="https://github.com/rrbaker/maker.json/blob/master/LICENSE.md">MIT license</a>.</p>
+<p>Found a bug? Think something could be explained better? Want to propose a modification to the schema? <a href="https://github.com/rrbaker/maker.json/issues">Open up an issue</a> or send an email to <a href="mailto:rrbaker@gmail.com">rrbaker@gmail.com</a>.</p>
+
+<!-- <h4>From the terminal</h4>
+<ol>
+    <li><a href="https://github.com/DCgov/maker.json-cli/blob/master/README.rst">Install</a> the maker.json command line interface with <code>pip install makerjson</code></li>
+    <li>Initialize a makerspaces.json file with <code>makerjson init</code></li>
+    <li>Edit the template to fit your project</li>
+    <li>Validate it with <code>maker.json validate</code></li>
+</ol> -->
+
+<h2 id="who" class="ui dividing header">Who is behind this?</h2>
+<p>maker.json was originally created by <a href="https://github.com/rrbaker/maker.json">Rob Baker</a> in early 2016 to help establish and improve global networks of makers. After inquiring within his network for location data and details, ultimately seeking good case studies, other than what larger establishments such as WeWork and FabLab provided the lists he dug up were ad hoc and questionable on how up-to-date was the information provided.</p>
+<p>This project borrows heavily (and gratefully) from <a href="https://github.com/BetaNYC/civic.json">civic.json</a>, a similar initiative originally created by BetaNYC in 2014 as "a metadata standard for civic technology projects that is intended to complement project information in a github repository." Additionally, and including this website, we've taken from <a href="http://open.dc.gov/civic.json/">contributions from the Code for DC volunteers and employees of the Washington DC District Government,</a> extending this specification to make it useful for a broader user base. A big thanks to those teams for their work and inspiration.</p>

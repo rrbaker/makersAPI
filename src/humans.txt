@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Rob Baker -- @https://twitter.com/rrbaker
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, JavaScript
+    Jekyll, Semantic UI, jQuery
+    Yeoman, Jekyllized

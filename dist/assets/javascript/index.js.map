@@ -1,0 +1,1 @@
+{"version":3,"sources":["vendor.js","main.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;ACHA;AACA","file":"index.js","sourcesContent":["'use strict';\n\nconsole.log('Hello world!');\n","\n"],"sourceRoot":"/source/"}
