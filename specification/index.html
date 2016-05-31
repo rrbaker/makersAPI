@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>
+    
+      Specification &middot; makersAPI
+    
+  </title>
+
+  <!-- CSS -->
+  <!-- build:css /assets/stylesheets/style.min.css -->
+  <link rel="stylesheet" href="/assets/stylesheets/style.css">
+  <!-- endbuild -->
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/assets/stylesheets/semantic.min.css" media="screen" title="no title" charset="utf-8">
+
+  <script src="/assets/javascript/jquery.min.js" charset="utf-8"></script>
+  <script src="/assets/javascript/tv4.min.js" charset="utf-8"></script>
+  <!-- JS -->
+  <!-- build:js /assets/javascript/all.min.js -->
+  <script src="/assets/javascript/javascript.js"></script>
+  <!-- endbuild -->
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/images/touch/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+</head>
+
+
+<body>
+    <div class="ui main container">
+    <header>
+    <div class="ui fixed inverted menu">
+        <div class="ui container">
+            <a href="/" class="header item">maker.json</a>
+            <a href="/" class="item">Home</a>
+            <a href="/specification" class="item">Specification</a>
+            <a href="/example" class="item">Example JSON</a>
+            <a href="/builder" class="item">Builder</a>
+            <a href="/validator" class="item">Validator</a>
+        </div>
+    </div>
+</header>
+</div>
+
+
+    <div class="ui main text container">
+    <h1 class="ui dividing header">Specification</h1>
+<h2 id="language" class="ui dividing header">Language</h2>
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in <a href="https://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>.</p>
+
+<h2 class="ui dividing header">File location and contents</h2>
+<ul class="ui list">
+    <li><code>maker.json</code> MUST reside in the root directory of a website's repository.</li>
+    <li><code>maker.json</code> MUST include a single object represented as JSON, with key-value pairs according to the list below.</li>
+</ul>
+<h2 class="ui dividing header">Fields</h2>
+
+<h3>Required</h3>
+<p>
+    <em>The following fields MUST be included:</em>
+</p>
+<table class="ui striped celled table">
+    <thead>
+        <tr>
+            <th class="right aligned three wide">Key</th>
+            <th class="thirteen wide">Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="right aligned"><code>name</code></td>
+            <td>A string specifying the location's name.</td>
+        </tr>
+        <tr>
+            <td class="right aligned"><code>address</code></td>
+            <td>
+                A string specifying the physical address of the location. Likely cases would include street, city, county/province/region, and area code. Where specific information is not available, just province is acceptable.
+            </td>
+        </tr>
+        <tr>
+            <td class="right aligned"><code>source</code></td>
+            <td>A string specifying what organization or person supplied this information.</td>
+        </tr>
+        <tr>
+            <td class="right aligned"><code>status</code></td>
+            <td>
+                A string indicating the status of the location. The value MUST be one of:
+                <ul>
+                    <li><code>"Open"</code> - The location is open for business</li>
+                    <li><code>"Closed"</code> - The location is permanently closed</li>
+                    <li><code>"Temporarily Closed"</code> - The location is temporarily closed.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="right aligned">
+                <code>type</code>
+            </td>
+            <td>
+                A string indicating the type of location. The value MUST be one of:
+                <ul>
+                    <li><code>"Innovation Lab"</code> - The location is open for business</li>
+                    <li><code>"Makerspace"</code> - The location is permanently closed</li>
+                    <li><code>"FabLab"</code> - The location is temporarily closed.</li>
+                    <li><code>"TechShop"</code> - Belonging to the official TechShop brand.</li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Strongly recommended</h3>
+<p><em>In addition to the above fields, the following fields SHOULD be included in every maker.json, where applicable:</em></p>
+
+<table class="ui striped celled table">
+    <thead>
+        <th class="right aligned">Key</th>
+        <th>Value</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="right aligned">
+                <code>contact</code>
+            </td>
+            <td>
+                an object providing the individual or group fielding questions about the location. The object structure MUST contain a <code>name</code> property and SHOULD contain an <code>email</code> and/or <code>url</code> property.
+            </td>
+        </tr>
+        <tr>
+            <td class="right aligned">
+                <code>description</code>
+            </td>
+            <td>
+                A description of the location usable as a summary.
+            </td>
+        </tr>
+        <tr>
+            <td class="right aligned">
+                <code>homepage</code>
+            </td>
+            <td>
+                the location's URL, if it is a website, or the URL of a site describing the location.
+            </td>
+        </tr>
+        <tr>
+            <td class="right aligned">
+                <code>id</code>
+            </td>
+            <td>
+                the URL describing the schema of the maker.json file.
+            </td>
+        </tr>
+        <tr>
+            <td class="right aligned">
+                <code>social</code>
+            </td>
+            <td>
+                An array of name and URLs related to the location's offical use of social media. Facebook, Github, Instagram, etc.
+            </td>
+        </tr>
+        <tr>
+            <td class="right aligned"><code>tags</code></td>
+            <td>An array of tag strings to help people search for your hlocation, which SHOULD have at least one item.</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3>Recommended</h3>
+<table class="ui striped celled table">
+    <thead>
+        <th class="right aligned">Key</th>
+        <th>Value</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="right aligned">
+                <code>projects</code>
+            </td>
+            <td>
+                An array of data objects, highlighting and describing some or all of the projects happening in the location. Each data object MUST include <code>name</code> and <code>url</code> properties, giving the dataset's name and download URL, respectively.
+                Each data object SHOULD also include a <code>metadata</code> property, providing the URL where the dataset's metadata can be read.
+            </td>
+        </tr>
+        <tr>
+            <td class="right aligned">
+                <code>thumbnail</code>
+            </td>
+            <td>
+                the URL of an image file (e.g. logo or screenshot) to be used in a location listing
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code>Partners</code>
+            </td>
+            <td>
+                An array of links
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p><em>The following are commonly used fields that your maker.json MAY contain:</em></p>
+<ul class="ui list">
+
+    <li><code>geography</code> - an array of geography strings, indicating the city, state, county, or other geographic entity the location is relevant to.</li>
+    <li><code>links</code> - an array of link strings, giving any additional webpage URLs relevant to your location.</li>
+    <li><code>partners</code> - an array of partner objects, describing the primary individuals or groups that contributing to the location. Each partner object MUST contain a <code>name</code> property and SHOULD contain an <code>email</code> and/or <code>url</code>        property.</li>
+</ul>
+
+<h3 class="ui header">Other</h3>
+<p><em>You MAY include other fields not listed above.</em></p>
+
+    </div>
+</body>
+
+</html>

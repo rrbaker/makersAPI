@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="https://makersapi.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://makersapi.com/" rel="alternate" type="text/html" /><updated>2016-05-31T15:55:01-04:00</updated><id>https://makersapi.com/</id><title>makersAPI</title><subtitle>An API, schema, and map of global makerspaces and DIY shops.</subtitle><author><name>Rob Baker</name><email>rrbaker@gmail.com</email><uri>https://makersapi.com</uri></author><entry><title>Welcome to Jekyll!</title><link href="https://makersapi.com/jekyll/2014/03/03/welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2014-03-03T00:00:00-05:00</published><updated>2014-03-03T00:00:00-05:00</updated><id>https://makersapi.com/jekyll/2014/03/03/welcome-to-jekyll</id><content type="html" xml:base="https://makersapi.com/jekyll/2014/03/03/welcome-to-jekyll/">&lt;p&gt;You&amp;rsquo;ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build
+(or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes! To add new posts, simply add
+a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention:
+YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;p&gt;We&amp;rsquo;ve also added a lot of different settings for &lt;a href=&quot;https://github.com/vmg/redcarpet&quot;&gt;Redcarpet&lt;/a&gt;,
+including being able to &lt;sup&gt;superscript,&lt;/sup&gt; &lt;u&gt;underline&lt;/u&gt;, &lt;mark&gt;highlight&lt;/mark&gt;,
+&lt;del&gt;strikethrough&lt;/del&gt;, and footnotes.&lt;sup id=&quot;fnref1&quot;&gt;&lt;a href=&quot;#fn1&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; It even automatically makes links into
+URLs: &lt;a href=&quot;http://www.jekyllrb.com&quot;&gt;www.jekyllrb.com&lt;/a&gt; and you can put multiple underscores in words without
+them leaning all over the place: this_word_has_underscores. It&amp;rsquo;ll also make your
+quotes look nice, like this: &amp;ldquo;hoho&amp;rdquo;, your dashes and hypens will be dashing too:
+&amp;mdash;/&amp;ndash;.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;def print_hi(name)
+  puts &amp;quot;Hi, #{name}&amp;quot;
+end
+print_hi(&amp;#39;Tom&amp;#39;)
+#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of
+Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;Jekyll&amp;rsquo;s GitHub repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+
+&lt;li id=&quot;fn1&quot;&gt;
+&lt;p&gt;Who are quite handy&amp;nbsp;&lt;a href=&quot;#fnref1&quot; rev=&quot;footnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+
+&lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Rob Baker</name><email>rrbaker@gmail.com</email><uri>https://makersapi.com</uri></author><summary>You&amp;rsquo;ll find this post in your _posts directory - edit this post and re-build
+(or run with the -w switch) to see your changes! To add new posts, simply add
+a file in the _posts directory that follows the convention:
+YYYY-MM-DD-name-of-post.ext.</summary></entry><entry><title>Introducing Poole</title><link href="https://makersapi.com/jekyll/poole/2014/03/02/introducing-poole/" rel="alternate" type="text/html" title="Introducing Poole" /><published>2014-03-02T00:00:00-05:00</published><updated>2014-03-02T00:00:00-05:00</updated><id>https://makersapi.com/jekyll/poole/2014/03/02/introducing-poole</id><content type="html" xml:base="https://makersapi.com/jekyll/poole/2014/03/02/introducing-poole/">&lt;p&gt;&lt;em&gt;The Strange Case of Dr. Jeykll and Mr. Hyde&lt;/em&gt; tells the story of a lawyer
+investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward
+Hyde. Chief among the novel&amp;rsquo;s supporting cast is a man by the name of Mr. Poole,
+Dr. Jekyll&amp;rsquo;s loyal butler.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;Poole is the butler for &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;, the static site
+generator. It&amp;rsquo;s designed and developed by &lt;a href=&quot;https://twitter.com/mdo&quot;&gt;@mdo&lt;/a&gt; to
+provide a clear and concise foundational setup for any Jekyll site. It does so
+by furnishing a full vanilla Jekyll install with example templates, pages,
+posts, and styles.&lt;/p&gt;
+
+&lt;p&gt;There are currently two themes built on Poole:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://hyde.getpoole.com&quot;&gt;Hyde&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://lanyon.getpoole.com&quot;&gt;Lanyon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Learn more and contribute on &lt;a href=&quot;https://github.com/poole&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3&gt;What&amp;rsquo;s included&lt;/h3&gt;
+
+&lt;p&gt;Poole is a streamlined Jekyll site designed and built as a foundation for
+building more meaningful themes. Poole, and every theme built on it, includes
+the following:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Complete Jekyll setup included (layouts, config, &lt;a href=&quot;/404&quot;&gt;404&lt;/a&gt;, &lt;a href=&quot;/atom.xml&quot;&gt;RSS
+feed&lt;/a&gt;, posts, and &lt;a href=&quot;/about&quot;&gt;example page&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Mobile friendly design and development&lt;/li&gt;
+&lt;li&gt;Easily scalable text and component sizing with &lt;code&gt;rem&lt;/code&gt; units in the CSS&lt;/li&gt;
+&lt;li&gt;Support for a wide gamut of HTML elements&lt;/li&gt;
+&lt;li&gt;Related posts (time-based, because Jekyll) below each post&lt;/li&gt;
+&lt;li&gt;Syntax highlighting, courtesy Pygments (the Python-based code snippet
+highlighter)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Additional features are available in individual themes.&lt;/p&gt;
+
+&lt;h3&gt;Browser support&lt;/h3&gt;
+
+&lt;p&gt;Poole and it&amp;rsquo;s themes are by preference a forward-thinking project. In addition
+to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it
+is only compatible with Internet Explorer 9 and above.&lt;/p&gt;
+
+&lt;h3&gt;Download&lt;/h3&gt;
+
+&lt;p&gt;Poole is developed on and hosted with GitHub. Head to the &lt;a
+href=&quot;https://github.com/poole/poole&quot;&gt;GitHub repository&lt;/a&gt; for downloads, bug
+reports, and features requests.&lt;/p&gt;
+
+&lt;p&gt;Thanks!&lt;/p&gt;</content><author><name>Rob Baker</name><email>rrbaker@gmail.com</email><uri>https://makersapi.com</uri></author><summary>The Strange Case of Dr. Jeykll and Mr. Hyde tells the story of a lawyer
+investigating the connection of two persons, Dr. Henry Jekyll and Mr. Edward
+Hyde. Chief among the novel&amp;rsquo;s supporting cast is a man by the name of Mr. Poole,
+Dr. Jekyll&amp;rsquo;s loyal butler.
+
+
+
+Poole is the butler for Jekyll, the static site
+generator. It&amp;rsquo;s designed and developed by @mdo to
+provide a clear and concise foundational setup for any Jekyll site. It does so
+by furnishing a full vanilla Jekyll install with example templates, pages,
+posts, and styles.
+
+There are currently two themes built on Poole:
+
+
+Hyde
+Lanyon
+
+
+Learn more and contribute on GitHub.
+
+What&amp;rsquo;s included
+
+Poole is a streamlined Jekyll site designed and built as a foundation for
+building more meaningful themes. Poole, and every theme built on it, includes
+the following:
+
+
+Complete Jekyll setup included (layouts, config, 404, RSS
+feed, posts, and example page)
+Mobile friendly design and development
+Easily scalable text and component sizing with rem units in the CSS
+Support for a wide gamut of HTML elements
+Related posts (time-based, because Jekyll) below each post
+Syntax highlighting, courtesy Pygments (the Python-based code snippet
+highlighter)
+
+
+Additional features are available in individual themes.
+
+Browser support
+
+Poole and it&amp;rsquo;s themes are by preference a forward-thinking project. In addition
+to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it
+is only compatible with Internet Explorer 9 and above.
+
+Download
+
+Poole is developed on and hosted with GitHub. Head to the GitHub repository for downloads, bug
+reports, and features requests.
+
+Thanks!</summary></entry></feed>
