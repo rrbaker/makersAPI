@@ -1,10 +1,10 @@
 // Example maker.json
-$.getJSON("https://raw.githubusercontent.com/rrbaker/maker.json/master/schema.json", function(json) {
+$.getJSON("https://raw.githubusercontent.com/rrbaker/makersAPI/gh-pages/schema.json", function(json) {
     $("#example_json code").append(JSON.stringify(json, null, "  "));
 });
 
 // Builder
-$.getJSON("https://raw.githubusercontent.com/rrbaker/maker.json/master/schema.json", function(json) {
+$.getJSON("https://raw.githubusercontent.com/rrbaker/makersAPI/gh-pages/schema.json", function(json) {
 
 });
 
@@ -13,7 +13,7 @@ $( document ).ready(function() {
   $('#validate_result').hide();
 });
 
-$.getJSON("https://raw.githubusercontent.com/rrbaker/maker.json/master/schema.json", function(schema) {
+$.getJSON("https://raw.githubusercontent.com/rrbaker/makersAPI/gh-pages/schema.json", function(schema) {
     $("#validate").click(function() {
         try {
             var maker = JSON.parse($("#to_validate").val());

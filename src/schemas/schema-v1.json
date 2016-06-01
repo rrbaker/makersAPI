@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "https://raw.githubusercontent.com/DCgov/civic.json/master/schemas/schema-v1.json",
+  "id": "https://raw.githubusercontent.com/rrbaker/maker.json/gh-pages/schemas/schema-v1.json",
   "type": "object",
   "required": [
     "status",
@@ -175,7 +175,7 @@
       "title": "schema URL",
       "description": "Civic.json schema URL",
       "type": "string",
-      "default": "https://raw.githubusercontent.com/DCgov/civic.json/master/schemas/schema-v1.json"
+      "default": "https://raw.githubusercontent.com/rrbaker/maker.json/gh-pages/schemas/schema-v1.json"
     }
   }
 }
