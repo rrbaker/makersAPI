@@ -16,13 +16,12 @@
   <link rel="stylesheet" href="/assets/stylesheets/style.css">
   <!-- endbuild -->
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/assets/stylesheets/semantic.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
 
-  <script src="/assets/javascript/jquery.min.js" charset="utf-8"></script>
-  <script src="/assets/javascript/tv4.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <!-- JS -->
-  <!-- build:js /assets/javascript/all.min.js -->
-  <script src="/assets/javascript/javascript.js"></script>
+  <!-- build:js /assets/javascript/index.js -->
+  <script src="/assets/javascript/index.js"></script>
   <!-- endbuild -->
 
   <!-- Icons -->
@@ -36,8 +35,8 @@
     <header>
     <div class="ui fixed inverted menu">
         <div class="ui container">
-            <a href="/" class="header item">maker.json</a>
-            <a href="/" class="item">Home</a>
+            <a href="/" class="header item">Makers API</a>
+            <a href="/map" class="item">The Map</a>
             <a href="/specification" class="item">Specification</a>
             <a href="/example" class="item">Example JSON</a>
             <a href="/builder" class="item">Builder</a>
@@ -48,172 +47,262 @@
 </div>
 
 
-    <div class="ui main text container">
-    <h1 class="ui dividing header">Specification</h1>
+    <div id="bento" class="ui main text container">
+        <h1 class="ui dividing header">Specification</h1>
 <h2 id="language" class="ui dividing header">Language</h2>
 <p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”, “RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in <a href="https://www.ietf.org/rfc/rfc2119.txt">RFC 2119</a>.</p>
 
 <h2 class="ui dividing header">File location and contents</h2>
 <ul class="ui list">
-    <li><code>maker.json</code> MUST reside in the root directory of a website's repository.</li>
-    <li><code>maker.json</code> MUST include a single object represented as JSON, with key-value pairs according to the list below.</li>
+	<li><code>maker.json</code> MUST reside in the root directory of a website's repository.</li>
+	<li><code>maker.json</code> MUST include a single object represented as JSON, with key-value pairs according to the list below.</li>
 </ul>
 <h2 class="ui dividing header">Fields</h2>
 
 <h3>Required</h3>
 <p>
-    <em>The following fields MUST be included:</em>
+	<em>The following information MUST be included:</em>
 </p>
 <table class="ui striped celled table">
-    <thead>
-        <tr>
-            <th class="right aligned three wide">Key</th>
-            <th class="thirteen wide">Value</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="right aligned"><code>name</code></td>
-            <td>A string specifying the location's name.</td>
-        </tr>
-        <tr>
-            <td class="right aligned"><code>address</code></td>
-            <td>
-                A string specifying the physical address of the location. Likely cases would include street, city, county/province/region, and area code. Where specific information is not available, just province is acceptable.
-            </td>
-        </tr>
-        <tr>
-            <td class="right aligned"><code>source</code></td>
-            <td>A string specifying what organization or person supplied this information.</td>
-        </tr>
-        <tr>
-            <td class="right aligned"><code>status</code></td>
-            <td>
-                A string indicating the status of the location. The value MUST be one of:
-                <ul>
-                    <li><code>"Open"</code> - The location is open for business</li>
-                    <li><code>"Closed"</code> - The location is permanently closed</li>
-                    <li><code>"Temporarily Closed"</code> - The location is temporarily closed.</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td class="right aligned">
-                <code>type</code>
-            </td>
-            <td>
-                A string indicating the type of location. The value MUST be one of:
-                <ul>
-                    <li><code>"Innovation Lab"</code> - The location is open for business</li>
-                    <li><code>"Makerspace"</code> - The location is permanently closed</li>
-                    <li><code>"FabLab"</code> - The location is temporarily closed.</li>
-                    <li><code>"TechShop"</code> - Belonging to the official TechShop brand.</li>
-                </ul>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-<h3>Strongly recommended</h3>
-<p><em>In addition to the above fields, the following fields SHOULD be included in every maker.json, where applicable:</em></p>
-
-<table class="ui striped celled table">
-    <thead>
-        <th class="right aligned">Key</th>
-        <th>Value</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="right aligned">
-                <code>contact</code>
-            </td>
-            <td>
-                an object providing the individual or group fielding questions about the location. The object structure MUST contain a <code>name</code> property and SHOULD contain an <code>email</code> and/or <code>url</code> property.
-            </td>
-        </tr>
-        <tr>
-            <td class="right aligned">
-                <code>description</code>
-            </td>
-            <td>
-                A description of the location usable as a summary.
-            </td>
-        </tr>
-        <tr>
-            <td class="right aligned">
-                <code>homepage</code>
-            </td>
-            <td>
-                the location's URL, if it is a website, or the URL of a site describing the location.
-            </td>
-        </tr>
-        <tr>
-            <td class="right aligned">
-                <code>id</code>
-            </td>
-            <td>
-                the URL describing the schema of the maker.json file.
-            </td>
-        </tr>
-        <tr>
-            <td class="right aligned">
-                <code>social</code>
-            </td>
-            <td>
-                An array of name and URLs related to the location's offical use of social media. Facebook, Github, Instagram, etc.
-            </td>
-        </tr>
-        <tr>
-            <td class="right aligned"><code>tags</code></td>
-            <td>An array of tag strings to help people search for your hlocation, which SHOULD have at least one item.</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th class="right aligned three wide">Key</th>
+			<th class="thirteen wide">Value</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="right aligned"><code>name</code></td>
+			<td>A string specifying the location's name.</td>
+		</tr>
+		<tr>
+			<td class="right aligned"><code>status</code></td>
+			<td>
+				A string indicating the status of the location. The value MUST be one of:
+				<ul>
+					<li><code>"active"</code> - The location or community is active.</li>
+					<li><code>"inactive"</code> - The location or community is inactive.</li>
+					<li><code>"planned"</code> - The location or community is in planning stages.</li>
+				</ul
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>type</code>
+			</td>
+			<td>
+				An array indicating the type of location/community. The value MUST be one of:
+				<ul>
+					<li><code>"Makerspace"</code> - Your makerspace shop with fabrication tools, computer stations, and community space.</li>
+					<li><code>"Fab Lab"</code> - As above, but ONLY those officially affiliated as Fab Labs.</li>
+					<li><code>"TechShop"</code> - As above, but ONLY those officially affiliated as TechShops.</li>
+					<li><code>"Hackerspace"</code> - A community space more focused on </li>
+					<li><code>"Coworking Space"</code> - Open floor plans for startups and small businesses, not necessarily hackers only.</li>
+					<li><code>"Innovation Lab"</code> - A space within larger organizations focused on emerging innovations or researching and development practices.</li>
+					<li><code>"University Lab"</code> - Sharing many of the principles above but supported by an educational institution and may or may not be only open to students.</li>
+					<li><code>"Library"</code> - Libraries as we know them but now offerings access to and workshops about DIY and fabrication topics (i.e. 3D printers).</li>
+				</ul>
+			</td>
+		</tr>
+	</tbody>
 </table>
 
 <h3>Recommended</h3>
+<p><em>The following information SHOULD be included where applicable:</em></p>
+
 <table class="ui striped celled table">
-    <thead>
-        <th class="right aligned">Key</th>
-        <th>Value</th>
-    </thead>
-    <tbody>
-        <tr>
-            <td class="right aligned">
-                <code>projects</code>
-            </td>
-            <td>
-                An array of data objects, highlighting and describing some or all of the projects happening in the location. Each data object MUST include <code>name</code> and <code>url</code> properties, giving the dataset's name and download URL, respectively.
-                Each data object SHOULD also include a <code>metadata</code> property, providing the URL where the dataset's metadata can be read.
-            </td>
-        </tr>
-        <tr>
-            <td class="right aligned">
-                <code>thumbnail</code>
-            </td>
-            <td>
-                the URL of an image file (e.g. logo or screenshot) to be used in a location listing
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <code>Partners</code>
-            </td>
-            <td>
-                An array of links
-            </td>
-        </tr>
-    </tbody>
+	<thead>
+		<th class="right aligned">Key</th>
+		<th>Value</th>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="right aligned"><code>source</code></td>
+			<td>
+				The source of this information. This could be a website, person, email address, or media source.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>description</code>
+			</td>
+			<td>
+				A brief summary of the location and/or community. A good description should not reiterate other parts of the schema such as available tools or location but offer details on the mission, vision, history, and values.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned"><code>address</code></td>
+			<td>
+				A string specifying the physical address of the location. This information SHOULD only include the street address or relative structures/business if that's not available. It SHOULD NOT other administrative information (to include separately, see below).
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned"><code>city</code></td>
+			<td>
+				A string specifying the city of the location.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned"><code>stateRegionProvince</code></td>
+			<td>
+				A string specifying the state, region, or province of the location.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned"><code>country</code></td>
+			<td>
+				A string specifying the country of the location.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>latitude</code>
+			</td>
+			<td>
+				The longitude of your location. Optional to support virtual communities and events with changing locations. The value MUST be a decimal number ONLY to a minimum of two spaces.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>longitude</code>
+			</td>
+			<td>
+				The longitude of your location. Optional to support virtual communities and events with changing locations. The value MUST be a decimal number ONLY to a minimum of two spaces.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>phone</code>
+			</td>
+			<td>
+				A main point of contact email address. The object MUST be a valid phone number and is a string to allow for multiple formats and extensions.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>website</code>
+			</td>
+			<td>
+				A string of the location/community's main website URL. The object MUST be a complete URL including http or https.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>email</code>
+			</td>
+			<td>
+				A main point of contact email address. The object MUST be a valid email address.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>id</code>
+			</td>
+			<td>
+				The URL describing the schema of the maker.json file.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>social</code>
+			</td>
+			<td>
+				An array of name and URLs related to the location's offical use of social media. Facebook, Github, Instagram, etc. The object keys MUST be in lowercase (e.g., "facebook" or "instagram") and values MUST be a complete URL including http or https.
+			</td>
+		</tr>
+	</tbody>
 </table>
-<p><em>The following are commonly used fields that your maker.json MAY contain:</em></p>
-<ul class="ui list">
 
-    <li><code>geography</code> - an array of geography strings, indicating the city, state, county, or other geographic entity the location is relevant to.</li>
-    <li><code>links</code> - an array of link strings, giving any additional webpage URLs relevant to your location.</li>
-    <li><code>partners</code> - an array of partner objects, describing the primary individuals or groups that contributing to the location. Each partner object MUST contain a <code>name</code> property and SHOULD contain an <code>email</code> and/or <code>url</code>        property.</li>
-</ul>
-
-<h3 class="ui header">Other</h3>
-<p><em>You MAY include other fields not listed above.</em></p>
+<h3>Optional</h3>
+<p><em>The following information MAY be included where applicable:</em></p>
+<table class="ui striped celled table">
+	<thead>
+		<th class="right aligned">Key</th>
+		<th>Value</th>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="right aligned">
+				<code>photo</code>
+			</td>
+			<td>
+				The URL of an image file (e.g. logo or screenshot) to be used in a location listing. Value MUST be a complete URL.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>tools</code>
+			</td>
+			<td>
+				Information about the tools available to members and/or the public. Examples include but are not limited to 3D printers, laser cutters, vinyl cutters, and computer workstations.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>mailingList</code>
+			</td>
+			<td>
+				Information about joining a mailing list for your space. Value SHOULD be either an email address or URL.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>openToExchanges</code>
+			</td>
+			<td>
+				A boolean (yes/no) statement if the space is open to exchanges.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>dateFounded</code>
+			</td>
+			<td>
+				The date the space (physical or virtual) was founded.  Value must be only a date and is stored in an ISO 8601 format.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>numberOfMembers</code>
+			</td>
+			<td>
+				The average number of members for the space. Value MUST be only a number.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>membershipFee</code>
+			</td>
+			<td>
+				A boolean (yes/no) response about if the space charges a fee to its members.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>openToExchanges</code>
+			</td>
+			<td>
+				Brief details about the membership rates, if applicable. Value could contain a URL for aditional information.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>openToResidencies</code>
+			</td>
+			<td>
+				A boolean (yes/no) answer to if the space is open to residencies. For easier upkeep, this answer SHOULD reflect if residencies are offered at all, not if there are currently openings.
+			</td>
+		</tr>
+		<tr>
+			<td class="right aligned">
+				<code>sizeOfRooms</code>
+			</td>
+			<td>
+				The average size of the rooms.
+			</td>
+		</tr>
+	</tbody>
+</table>
 
     </div>
 </body>
