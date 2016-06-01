@@ -16,13 +16,12 @@
   <link rel="stylesheet" href="/assets/stylesheets/style.css">
   <!-- endbuild -->
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/assets/stylesheets/semantic.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
 
-  <script src="/assets/javascript/jquery.min.js" charset="utf-8"></script>
-  <script src="/assets/javascript/tv4.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <!-- JS -->
-  <!-- build:js /assets/javascript/all.min.js -->
-  <script src="/assets/javascript/javascript.js"></script>
+  <!-- build:js /assets/javascript/index.js -->
+  <script src="/assets/javascript/index.js"></script>
   <!-- endbuild -->
 
   <!-- Icons -->
@@ -36,8 +35,8 @@
     <header>
     <div class="ui fixed inverted menu">
         <div class="ui container">
-            <a href="/" class="header item">maker.json</a>
-            <a href="/" class="item">Home</a>
+            <a href="/" class="header item">Makers API</a>
+            <a href="/map" class="item">The Map</a>
             <a href="/specification" class="item">Specification</a>
             <a href="/example" class="item">Example JSON</a>
             <a href="/builder" class="item">Builder</a>
@@ -48,21 +47,53 @@
 </div>
 
 
-    <div class="ui main text container">
-    <h2 id="what" class="ui dividing dividing header">What is maker.json?</h2>
-<p>There are a growing number of DIY shops, offices, coworking spaces, labs, et cetera around the world, filling with people working on amazing projects from Arduinos to Zeroes.</p>
-<p>So many, in fact, it's increasingly hard to keep up. When we started looking around for lists, we found them: several people keeping their own Google Sheets and JSON files for personal or community references, keeping various types of useful information in various formats and collecting a variety of information.</p>
-<p>Enter maker.json: a small file you put at the root of website or at a public repository, storing standardized information about your space, its status, who is involved, what kind of tools are available, and where people can learn more. Think of it as a structured "README" file.</p>
-<p>What does it look like? <a href="#example">Check out an example of the maker.json specification.</a></p>
+    <div id="bento" class="ui main text container">
+        <h1 id="what" class="ui dividing dividing header">What is Makers API?</h1>
+<p><strong>Makers API is a schema for collecting standardized information about makerspaces, an API for sharing that information, and a map to browse and sort. The goal is to connect makers around the world, helping them collaborate and co-create.</strong></p>
+<br>
+<p>There are a growing number of makerspaces, hackerspaces, DIY shops, innovation labs, coworking spaces, tech-enabled libraries, et cetera, all around the world, filling with people working on amazing projects from Arduinos to (RPi) Zeroes.</p>
+<p>So many, in fact, it's increasingly hard to keep up. When I started looking around for lists, I found them: groups compiling data in Google Sheets, JSON files, and maps and collecting a variety of information in a variety of formats.</p>
+<p>Enter the Makers API project. This includes the maker.json schema, a small file you put at the root of website or at a public repository, storing standardized information about your space, its status, who is involved, what kind of tools are available, and where people can learn more. Think of it as a structured "README" file.</p>
+<p>What does it look like? <a href="/example">Check out an example of the maker.json specification.</a></p>
+<p>From there, we've taken the first step in standardizing the information collected from so many other groups to this format, and built a structured API around this schema.</p>
 
 <h2 id="contribute" class="ui dividing header">How can I contribute?</h2>
-<p><a href="https://github.com/rrbaker/maker.json/tree/master">Here is maker.json schema.</a> <a href="/specification.html">The schema specification</a> gives more detail about the information that goes into a maker.json file.</p> To build your own:
+<div class="ui relaxed divided items">
+  <div class="item">
+    <i class="image comments icon huge"></i>
+    <div class="content">
+      <b class="header">Advice wanted</b>
+      <div class="description">
+        <p>I'd love to hear your thoughts on this, from a v2 schema structure to presentation. What else should we collect? How else can we use this API?</p>
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <i class="image marker icon huge"></i>
+    <div class="content">
+      <b class="header">Implement!</b>
+      <div class="description">
+        <p>This is no good unless people use it (I.. also really don't want to have to write conversion scripts). Big plans in store and would love to talk to folks about what it would take to adopt this. Or did you? Please let me know!</p>
+      </div>
+    </div>
+  </div>
+  <div class="item">
+    <i class="image marker icon huge"></i>
+    <div class="content">
+      <b class="header">Suggest a space</b>
+      <div class="description">
+        <p><i>Curation is everyone's job.</i> <b><a href="/map">Check the map:</a></b> is your space listed? If it is, is the information up to date? Please help us make sure we're representing everyone and accurately!</p>
+      </div>
+    </div>
+  </div>
+</div>
+<p><a href="https://github.com/rrbaker/maker.json/tree/master">Here is maker.json schema.</a> <a href="/spec">The schema specification</a> gives more detail about the information that goes into a maker.json file.</p> To build your own:
 <ol>
-  <li><a href="/builder.html">Build it</a> with the maker.json web form</li>
-  <li><a href="/validator.html">Validate</a> an existing maker.json file by pasting its contents here</li>
+  <li><a href="/build">Build it</a> with the maker.json web form</li>
+  <li><a href="/validate">Validate</a> an existing maker.json file by pasting its contents here</li>
 </ol>
-<p>Additionally, <a href="https://github.com/rrbaker/maker.json/tree/gh-pages">this website's source is here</a>. Both the site, schema, and JSON available under the <a href="https://github.com/rrbaker/maker.json/blob/master/LICENSE.md">MIT license</a>.</p>
-<p>Found a bug? Think something could be explained better? Want to propose a modification to the schema? <a href="https://github.com/rrbaker/maker.json/issues">Open up an issue</a> or send an email to <a href="mailto:rrbaker@gmail.com">rrbaker@gmail.com</a>.</p>
+<p>Additionally, <a href="https://github.com/rrbaker/makersAPI/tree/gh-pages">this website's source is here</a>. Both the site, schema, and JSON available under the <a href="https://github.com/rrbaker/makersAPI/blob/master/LICENSE.md">MIT license</a>.</p>
+<p>Found a bug? Think something could be explained better? Want to propose a modification to the schema? <a href="https://github.com/rrbaker/makersAPI/issues">Open up an issue</a> or send an email to <a href="mailto:rrbaker@gmail.com">rrbaker@gmail.com</a>.</p>
 
 <!-- <h4>From the terminal</h4>
 <ol>
@@ -73,7 +104,7 @@
 </ol> -->
 
 <h2 id="who" class="ui dividing header">Who is behind this?</h2>
-<p>maker.json was originally created by <a href="https://github.com/rrbaker/maker.json">Rob Baker</a> in early 2016 to help establish and improve global networks of makers. After inquiring within his network for location data and details, ultimately seeking good case studies, other than what larger establishments such as WeWork and FabLab provided the lists he dug up were ad hoc and questionable on how up-to-date was the information provided.</p>
+<p>maker.json was originally created by <a href="http://rrbaker.com">Rob Baker</a> in June 2016 to help establish and improve global networks of makers. After inquiring within his network for location data and details, ultimately seeking good case studies, other than what larger establishments such as WeWork and FabLab provided the lists he dug up were ad hoc and questionable on how up-to-date was the information provided.</p>
 <p>This project borrows heavily (and gratefully) from <a href="https://github.com/BetaNYC/civic.json">civic.json</a>, a similar initiative originally created by BetaNYC in 2014 as "a metadata standard for civic technology projects that is intended to complement project information in a github repository." Additionally, and including this website, we've taken from <a href="http://open.dc.gov/civic.json/">contributions from the Code for DC volunteers and employees of the Washington DC District Government,</a> extending this specification to make it useful for a broader user base. A big thanks to those teams for their work and inspiration.</p>
 
     </div>

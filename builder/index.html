@@ -16,13 +16,12 @@
   <link rel="stylesheet" href="/assets/stylesheets/style.css">
   <!-- endbuild -->
   <link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="/assets/stylesheets/semantic.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css">
 
-  <script src="/assets/javascript/jquery.min.js" charset="utf-8"></script>
-  <script src="/assets/javascript/tv4.min.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <!-- JS -->
-  <!-- build:js /assets/javascript/all.min.js -->
-  <script src="/assets/javascript/javascript.js"></script>
+  <!-- build:js /assets/javascript/index.js -->
+  <script src="/assets/javascript/index.js"></script>
   <!-- endbuild -->
 
   <!-- Icons -->
@@ -36,8 +35,8 @@
     <header>
     <div class="ui fixed inverted menu">
         <div class="ui container">
-            <a href="/" class="header item">maker.json</a>
-            <a href="/" class="item">Home</a>
+            <a href="/" class="header item">Makers API</a>
+            <a href="/map" class="item">The Map</a>
             <a href="/specification" class="item">Specification</a>
             <a href="/example" class="item">Example JSON</a>
             <a href="/builder" class="item">Builder</a>
@@ -48,8 +47,8 @@
 </div>
 
 
-    <div class="ui main text container">
-    <h1 class="ui dividing header">Builder</h1>
+    <div id="bento" class="ui main text container">
+        <h1 class="ui dividing header">Builder</h1>
 <p>The form below will help you build a valid civic.json file. Fill out all of the required fields (marked by a star) and any others. Next, you can click the buttons at the bottom of the page to render and then download the output to your computer.</p>
 
 <div id="form"></div>
